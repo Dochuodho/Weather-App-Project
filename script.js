@@ -10,6 +10,10 @@ async function checkWeather(){
 
     //Updating our values according to data that is coming from the API
 
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = data.main.temp + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed;
 
 }
 
