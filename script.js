@@ -7,12 +7,12 @@ const weatherIcon = document.querySelector(".icon")
 //displaying the data in JSON format
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-//displaying the error message
+    //displaying the error message
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
-//else display the
-}else{
+    //else display the data
+    }else{
     var data = await response.json();
 
 
@@ -49,7 +49,6 @@ async function checkWeather(city){
 
 }
    
-
 }
 
 searchBtn.addEventListener("click", ()=>{
